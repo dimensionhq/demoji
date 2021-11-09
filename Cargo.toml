@@ -1,0 +1,20 @@
+[package]
+name = "demoji"
+version = "0.0.1"
+edition = "2021"
+authors = ["XtremeDevX <xtremedevx@gmail.com>"]
+license = "MIT"
+description = "Remove all emojis from a string."
+keywords = ["emoji"]
+repository = "https://github.com/XtremeDevX/demoji"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+regex = "1.5.4"
+
+[profile.release]
+opt-level = 3     # Optimize for speed.
+lto = true          # Enable Link Time Optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations.
