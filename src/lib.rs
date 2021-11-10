@@ -53,3 +53,20 @@ pub fn demoji(string: &str) -> String {
 
     regex.replace_all(&string, "").to_string()
 }
+
+/// Demojify `String` and `&str`
+pub trait Demoji {
+    fn demojify(&self) -> String;
+}
+
+impl Demoji for &str {
+    fn demojify(&self) -> String {
+        demoji(self)
+    }
+}
+
+impl Demoji for String {
+    fn demojify(&self) -> String {
+        demoji(&self)
+    }
+}
