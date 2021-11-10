@@ -17,7 +17,7 @@ This crate aims to be:
 ```rust
 // Remove all emojis from this string
 let demojified_string = demoji("⚡hel✅🙂lo🙂")
-assert_eq!(demojified_string, "hello");
+assert_eq!(demojified_string, String::from("hello"));
 ```
 
 ### What does the name mean?

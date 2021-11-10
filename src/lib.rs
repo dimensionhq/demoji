@@ -15,7 +15,7 @@
 //! ```rust
 //! // Remove all emojis from this string
 //! let demojified_string = demoji("⚡hel✅🙂lo🙂");
-//! assert_eq!(demojified_string, "hello");
+//! assert_eq!(demojified_string, String::from("hello"));
 //! ```
 use regex::Regex;
 
@@ -35,7 +35,7 @@ use regex::Regex;
 ///
 /// // Remove all emojis from this string
 /// let demojified_string = demoji("⚡hel✅🙂lo🙂")
-/// assert_eq!(demojified_string, "hello");
+/// assert_eq!(demojified_string, String::from("hello"));
 /// // Output: `hello`
 /// ```
 pub fn demoji(string: &str) -> String {
