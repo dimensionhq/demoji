@@ -4,7 +4,7 @@ A lightweight and snappy crate to remove emojis from a string.
 
 ## Overview
 
-This crate allows for removal of emojis given a `String`, and that's it!
+This crate allows for removal of emojis given a string, and that's it!
 
 This crate aims to be:
 
@@ -16,8 +16,8 @@ This crate aims to be:
 
 ```rust
 // Remove all emojis from this string
-let demojified_string = demoji(String::from("⚡hel✅🙂lo🙂"))
-// Output: `hello`
+let demojified_string = demoji("⚡hel✅🙂lo🙂")
+assert_eq!(demojified_string, "hello");
 ```
 
 ### What does the name mean?

@@ -14,8 +14,8 @@
 //!
 //! ```rust
 //! // Remove all emojis from this string
-//! let demojified_string = demoji(String::from("⚡hel✅🙂lo🙂"))
-//! // Output: `hello`
+//! let demojified_string = demoji("⚡hel✅🙂lo🙂");
+//! assert_eq!(demojified_string, "hello");
 //! ```
 use regex::Regex;
 
@@ -34,10 +34,11 @@ use regex::Regex;
 /// ```
 ///
 /// // Remove all emojis from this string
-/// let demojified_string = demoji(String::from("⚡hel✅🙂lo🙂"))
+/// let demojified_string = demoji("⚡hel✅🙂lo🙂")
+/// assert_eq!(demojified_string, "hello");
 /// // Output: `hello`
 /// ```
-pub fn demoji(string: String) -> String {
+pub fn demoji(string: &str) -> String {
     let regex = Regex::new(concat!(
         "[",
         "\u{01F600}-\u{01F64F}", // emoticons
