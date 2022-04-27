@@ -13,8 +13,9 @@ readme = "README.md"
 
 [dependencies]
 regex = "1.5.4"
+once_cell = "1.10.0"
 
 [profile.release]
 opt-level = 3     # Optimize for speed.
-lto = true          # Enable Link Time Optimization
-codegen-units = 1   # Reduce number of codegen units to increase optimizations.
+lto = true        # Enable Link Time Optimization
+codegen-units = 1 # Reduce number of codegen units to increase optimizations.
